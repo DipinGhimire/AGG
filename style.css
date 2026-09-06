@@ -352,6 +352,64 @@ textarea:focus-visible {
   object-fit: cover;
 }
 
+/* ---------- 6.5 店舗一覧 ---------- */
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.store-card {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.store-card__image {
+  min-height: 220px;
+  background-position: center;
+  background-size: cover;
+}
+
+.store-card__image--saitama {
+  background-image: linear-gradient(135deg, rgba(43, 40, 37, 0.05), rgba(180, 85, 47, 0.25)), url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=85");
+}
+
+.store-card__image--tokyo {
+  background-image: linear-gradient(135deg, rgba(43, 40, 37, 0.05), rgba(217, 149, 50, 0.25)), url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85");
+}
+
+.store-card__body {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+
+.store-card__area {
+  color: var(--color-accent);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  margin-bottom: var(--space-1);
+}
+
+.store-card__title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-1);
+}
+
+.store-card__desc {
+  color: var(--color-subtext);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-2);
+}
+
+.text-link {
+  color: var(--color-accent-dark);
+  font-size: var(--fs-sm);
+  border-bottom: 1px solid currentColor;
+}
+
+.text-link:hover {
+  color: var(--color-accent);
+}
+
 /* ---------- 7. About（会社情報テーブル共通） ---------- */
 .info-table {
   width: 100%;
@@ -839,6 +897,14 @@ textarea:focus-visible {
 
   .sub-business-grid {
     grid-template-columns: 1fr;
+  }
+
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .store-card__image {
+    min-height: 190px;
   }
 
   .site-footer__inner {
