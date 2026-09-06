@@ -15,6 +15,7 @@
   --color-subtext: #6b6259;     /* 補足テキスト用グレー */
   --color-accent: #b4552f;      /* アクセントカラー（落ち着いたレンガ色） */
   --color-accent-dark: #8f4325; /* アクセントの濃色（hover等） */
+  --color-saffron: #d99532;     /* ネパールの食文化を想起させる補助色 */
   --color-border: rgba(43, 40, 37, 0.14);
   --color-border-light: rgba(43, 40, 37, 0.08);
 
@@ -299,7 +300,7 @@ textarea:focus-visible {
 .hero {
   position: relative;
   padding-block: var(--space-7) var(--space-6);
-  background-color: var(--color-bg);
+  background: linear-gradient(115deg, var(--color-bg) 0%, #f8f0e4 62%, #ead8bd 100%);
   overflow: hidden;
 }
 
@@ -342,6 +343,7 @@ textarea:focus-visible {
   border: 1px solid var(--color-border);
   background: linear-gradient(160deg, var(--color-bg-alt), var(--color-surface));
   overflow: hidden;
+  box-shadow: 18px 18px 0 rgba(180, 85, 47, 0.12);
 }
 
 .hero__visual img {
