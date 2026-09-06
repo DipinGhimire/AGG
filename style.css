@@ -190,22 +190,15 @@ textarea:focus-visible {
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: var(--fs-lg);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
 }
 
-.logo small {
+.logo__image {
+  height: 44px;      /* ヘッダーの高さに合わせて調整可 */
+  width: auto;
   display: block;
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 400;
-  color: var(--color-subtext);
-  letter-spacing: 0.1em;
 }
-
 .nav {
   display: flex;
   align-items: center;
@@ -844,7 +837,16 @@ textarea:focus-visible {
     gap: var(--space-1);
   }
 }
+.sub-business-card__list,
+.business-detail__list {
+  margin-top: var(--space-2, 0.5rem);
+  padding-left: 1.2em;
+}
 
+.sub-business-card__list li,
+.business-detail__list li {
+  margin-bottom: 0.3em;
+}
 /* ---------- 18. レスポンシブ：スマートフォン ---------- */
 @media (max-width: 640px) {
   :root {
