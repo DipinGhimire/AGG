@@ -614,6 +614,24 @@ textarea:focus-visible {
   max-width: 640px;
 }
 
+.policy-content {
+  max-width: 760px;
+}
+
+.policy-content h2 {
+  font-size: var(--fs-lg);
+  margin: var(--space-4) 0 var(--space-1);
+}
+
+.policy-content p {
+  color: var(--color-subtext);
+}
+
+.policy-content__date {
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+}
+
 /* ---------- 16. フッター ---------- */
 .site-footer {
   border-top: 1px solid var(--color-border);
