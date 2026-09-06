@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜合同会社AGG</title>
+  <meta name="description" content="合同会社AGGへのお問い合わせページです。">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="お問い合わせ｜合同会社AGG">
+  <meta property="og:description" content="合同会社AGGへのお問い合わせページです。">
+  <meta property="og:site_name" content="合同会社AGG">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo">AGG<small>合同会社AGG</small></a>
+
+      <nav class="nav" id="site-nav" aria-label="グローバルナビゲーション">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">TOP</a></li>
+          <li><a class="nav__link" href="about.html">会社概要</a></li>
+          <li><a class="nav__link" href="business.html">事業内容</a></li>
+          <li><a class="nav__link" href="contact.html" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">TOP</a> ／ お問い合わせ</p>
+    </div>
+
+    <div class="page-header">
+      <div class="container">
+        <p class="page-header__eyebrow">Contact</p>
+        <h1 class="page-header__title">お問い合わせ</h1>
+        <p class="page-header__desc">
+          事業に関するご質問・ご相談は、以下のフォームよりお送りください。
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <!--
+          注意：このフォームは現時点でバックエンド（送信処理）が未実装です。
+          入力チェック（バリデーション）はJavaScriptで行っていますが、
+          実際にメールを送信するには、サーバーサイドの処理
+          （PHP / フォーム送信サービス / API連携など）を別途実装する必要があります。
+        -->
+        <div class="form-success" id="form-success" role="status">
+          送信内容を確認しました（デモ表示）。<br>
+          ※現時点では実際の送信機能は実装されていません。
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input type="text" id="name" name="name" data-required autocomplete="name">
+            <p class="form-error">お名前を入力してください。</p>
+          </div>
+
+          <div class="form-row">
+            <label for="company">会社名</label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+
+          <div class="form-row">
+            <label for="email">メールアドレス<span class="required">必須</span></label>
+            <input type="email" id="email" name="email" data-required autocomplete="email">
+            <p class="form-error">正しいメールアドレスを入力してください。</p>
+          </div>
+
+          <div class="form-row">
+            <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+            <textarea id="message" name="message" data-required></textarea>
+            <p class="form-error">お問い合わせ内容を入力してください。</p>
+          </div>
+
+          <button type="submit" class="btn btn--primary">送信する</button>
+          <p class="form-note">
+            ※このフォームは現在デモ表示です。送信機能は今後実装予定です。
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="logo">AGG</p>
+          <p class="site-footer__desc">合同会社AGG<br>飲食店経営を中心に、複数の事業を展開しています。</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+          <div>
+            <p class="site-footer__nav-title">サイト内</p>
+            <ul class="site-footer__nav-list">
+              <li><a href="index.html">TOP</a></li>
+              <li><a href="about.html">会社概要</a></li>
+              <li><a href="business.html">事業内容</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="site-footer__nav-title">その他</p>
+            <ul class="site-footer__nav-list">
+              <li><a href="privacy.html">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2025 合同会社AGG</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
