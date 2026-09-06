@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
       var fields = form.querySelectorAll("[data-required]");
 
       fields.forEach(function (field) {
-        var row = field.closest(".form-row");
+        var row = field.closest(".form-row, .form-consent");
         var value = field.value.trim();
-        var invalid = value === "";
+        var invalid = field.type === "checkbox" ? !field.checked : value === "";
 
         if (field.type === "email" && !invalid) {
           var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         form.reset();
       } else {
-        var firstError = form.querySelector(".has-error input, .has-error textarea");
+        var firstError = form.querySelector(".has-error input, .has-error textarea, .has-error select");
         if (firstError) {
           firstError.focus();
         }

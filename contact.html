@@ -63,11 +63,21 @@
           （PHP / フォーム送信サービス / API連携など）を別途実装する必要があります。
         -->
         <div class="form-success" id="form-success" role="status">
-          送信内容を確認しました（デモ表示）。<br>
-          ※現時点では実際の送信機能は実装されていません。
+          入力内容を確認しました。現在は送信先設定前のプレビューです。
         </div>
 
         <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="category">お問い合わせ種別<span class="required">必須</span></label>
+            <select id="category" name="category" data-required>
+              <option value="">選択してください</option>
+              <option value="店舗について">店舗について</option>
+              <option value="事業について">事業について</option>
+              <option value="その他">その他</option>
+            </select>
+            <p class="form-error">お問い合わせ種別を選択してください。</p>
+          </div>
+
           <div class="form-row">
             <label for="name">お名前<span class="required">必須</span></label>
             <input type="text" id="name" name="name" data-required autocomplete="name">
@@ -91,9 +101,16 @@
             <p class="form-error">お問い合わせ内容を入力してください。</p>
           </div>
 
+          <div class="form-consent">
+            <label>
+              <input type="checkbox" id="consent" name="consent" data-required>
+              <span><a href="privacy.html">プライバシーポリシー</a>に同意する<span class="required">必須</span></span>
+            </label>
+            <p class="form-error">プライバシーポリシーへの同意が必要です。</p>
+          </div>
           <button type="submit" class="btn btn--primary">送信する</button>
           <p class="form-note">
-            ※このフォームは現在デモ表示です。送信機能は今後実装予定です。
+            現在はフォームの入力確認まで対応しています。送信先設定後に実送信へ切り替えます。
           </p>
         </form>
       </div>
