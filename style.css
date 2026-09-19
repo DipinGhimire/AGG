@@ -1013,3 +1013,15 @@ textarea:focus-visible {
     height: 52px;
   }
 }
+
+/* ---------- 19. 社長挨拶ページ：CTAパネル内の複数ボタン ---------- */
+.cta-panel .btn {
+  margin: 0 var(--space-1);
+}
+
+@media (max-width: 640px) {
+  .cta-panel .btn {
+    margin: 0.4rem 0;
+    width: 100%;
+  }
+}
