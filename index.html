@@ -1,173 +1,353 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#faf8f4">
-  <meta name="description" content="合同会社AGGのウェブサイト。言語を選択してください。">
-  <title>AGG | Language Selection</title>
-  <style>
-    :root {
-      color-scheme: light;
-      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-      color: #2b2825;
-      background: #faf8f4;
-      font-synthesis: none;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>合同会社AGG｜ネパールと日本をつなぐ事業</title>
+  <meta name="description" content="合同会社AGGは、ネパールにルーツを持つメンバーが日本で運営する企業です。埼玉・東京の飲食店を中心に、食と人を通じた事業を展開しています。">
 
-    * {
-      box-sizing: border-box;
-    }
+  <!-- OGP（基本設定） -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="合同会社AGG｜ネパールと日本をつなぐ事業">
+  <meta property="og:description" content="ネパールにルーツを持つメンバーが日本で運営する合同会社AGG。埼玉・東京の飲食店を中心に事業を展開しています。">
+  <meta property="og:site_name" content="合同会社AGG">
+  <!-- OGP画像は正式なロゴ・画像が用意され次第、下記に設定してください -->
+  <!-- <meta property="og:image" content="images/logo/ogp.png"> -->
 
-    body {
-      min-width: 280px;
-      min-height: 100vh;
-      margin: 0;
-      background:
-        linear-gradient(135deg, transparent 0 72%, rgba(217, 149, 50, 0.08) 72% 72.2%, transparent 72.2%),
-        linear-gradient(315deg, transparent 0 84%, rgba(180, 85, 47, 0.07) 84% 84.2%, transparent 84.2%),
-        #faf8f4;
-    }
-
-    main {
-      display: grid;
-      min-height: 100vh;
-      grid-template-rows: auto 1fr auto;
-      padding: 32px clamp(20px, 6vw, 88px) 24px;
-    }
-
-    .wordmark {
-      width: fit-content;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .selector {
-      width: min(100%, 520px);
-      align-self: center;
-      justify-self: center;
-      padding: 60px 0 72px;
-      animation: arrive 600ms ease-out both;
-    }
-
-    .eyebrow {
-      margin: 0 0 18px;
-      color: #8f4325;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-family: Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif;
-      font-size: clamp(2.25rem, 8vw, 3.5rem);
-      font-weight: 500;
-      line-height: 1.2;
-    }
-
-    .intro {
-      margin: 16px 0 38px;
-      color: #6b6259;
-      font-size: 1rem;
-    }
-
-    .language-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .language-link {
-      display: flex;
-      min-height: 68px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 16px 20px;
-      border: 1px solid rgba(43, 40, 37, 0.18);
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.76);
-      color: #2b2825;
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
-    }
-
-    .language-link span:last-child {
-      color: #8f4325;
-      font-size: 1.25rem;
-      line-height: 1;
-    }
-
-    .language-link:hover {
-      transform: translateY(-2px);
-      border-color: #b4552f;
-      background: #fff;
-    }
-
-    .language-link:focus-visible {
-      outline: 3px solid #d99532;
-      outline-offset: 3px;
-    }
-
-    footer {
-      color: #6b6259;
-      font-size: 0.8125rem;
-    }
-
-    @keyframes arrive {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 480px) {
-      main {
-        padding-top: 26px;
-        padding-bottom: 20px;
-      }
-
-      .selector {
-        padding: 48px 0 56px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <div class="wordmark" aria-label="AGG">AGG</div>
 
-    <section class="selector" aria-labelledby="page-title">
-      <p class="eyebrow">合同会社AGG</p>
-      <h1 id="page-title">言語を選択</h1>
-      <p class="intro">Select your language</p>
-      <nav class="language-list" aria-label="Language selection">
-        <a class="language-link" href="/AGG_JP/" lang="ja">
-          <span>日本語 / Japanese</span>
-          <span aria-hidden="true">&#8594;</span>
-        </a>
-        <a class="language-link" href="/AGG_EN/" lang="en">
-          <span>English</span>
-          <span aria-hidden="true">&#8594;</span>
-        </a>
+  <!-- ============ Header ============ -->
+    <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="合同会社AGG" class="logo__image">
+      </a>
+      <nav class="nav" id="site-nav" aria-label="グローバルナビゲーション" data-ja-aria-label="グローバルナビゲーション" data-en-aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html" aria-current="page">TOP</a></li>
+          <li><a class="nav__link" href="about.html">会社概要</a></li>
+          <li><a class="nav__link" href="president.html">社長挨拶</a></li>
+          <li><a class="nav__link" href="business.html">事業内容</a></li>
+          <li><a class="nav__link" href="contact.html">お問い合わせ</a></li>
+        </ul>
       </nav>
+
+      <div class="language-toggle" role="group" aria-label="言語 / Language" data-ja-aria-label="言語" data-en-aria-label="Language">
+        <button type="button" data-language="ja" aria-pressed="true">JP</button>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="メニューを開く" data-ja-aria-label="メニューを開く" data-en-aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Nepal × Japan / AGG LLC</p>
+          <h1 class="hero__title"><span data-ja="ネパールと日本を、" data-en="Connecting Nepal and Japan">ネパールと日本を、</span><br><span data-ja="食と人でつなぐ。" data-en="through food and people.">食と人でつなぐ。</span></h1>
+          <p class="hero__desc">
+            ネパールにルーツを持つメンバーが日本で運営する合同会社AGG。
+            飲食店の経営を中心に、異なる文化や人が出会う場をつくっています。
+          </p>
+          <div class="hero__actions">
+            <a href="business.html" class="btn btn--primary">事業内容を見る</a>
+            <a href="about.html" class="btn btn--outline">会社概要を見る</a>
+          </div>
+        </div>
+
+        <!-- 画像差し替え箇所：正式なヒーロー画像が用意でき次第、
+             src を images/hero/ 内の実写真パスに差し替えてください -->
+        <div class="hero__visual">
+          <img src="images/home.jpg" alt="レストラン">
+        </div>
+      </div>
     </section>
 
-    <footer>&copy; AGG LLC</footer>
+    <!-- ============ About AGG ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">About AGG</p>
+          <h2 class="section__title">合同会社AGGについて</h2>
+        </div>
+
+        <table class="info-table">
+  <tbody>
+    <tr>
+      <th scope="row">会社名</th>
+      <td>合同会社AGG（AGG LLC）</td>
+    </tr>
+    <tr>
+      <th scope="row">設立</th>
+      <td>令和7年5月12日</td>
+    </tr>
+    <tr>
+      <th scope="row">代表社員</th>
+      <td>カドカ・ナラヤン</td>
+    </tr>
+    <tr>
+      <th scope="row">代表番号</th>
+      <td>03-6657-0388</td>
+    </tr>
+    <tr>
+      <th scope="row">資本金</th>
+      <td>526万円</td>
+    </tr>
+    <tr>
+      <th scope="row">所在地</th>
+      <td><span data-ja="〒131-0043" data-en="Shiiba Building, 1F, Room 101">〒131-0043</span><br><span data-ja="東京都墨田区立花4-23-7 椎葉ビル1階101号" data-en="4-23-7 Tachibana, Sumida-ku, Tokyo 131-0043, Japan">東京都墨田区立花4-23-7 椎葉ビル1階101号</span></td>
+    </tr>
+    <tr>
+      <th scope="row">法人番号</th>
+      <td>5010603011561</td>
+    </tr>
+    <tr>
+      <th scope="row">取引銀行</th>
+      <td><span data-ja="三井住友銀行" data-en="Sumitomo Mitsui Banking Corporation">三井住友銀行</span><br><span data-ja="GMOあおぞらネット銀行" data-en="GMO Aozora Net Bank">GMOあおぞらネット銀行</span><br><span data-ja="城北信用金庫" data-en="Johoku Shinkin Bank">城北信用金庫</span><br><span data-ja="東京東信用金庫" data-en="Tokyo Higashi Shinkin Bank">東京東信用金庫</span></td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </section>
+
+    <!-- ============ Main Business ============ -->
+    <section class="section section--alt" id="main-business">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Main Business</p>
+          <h2 class="section__title">メイン事業</h2>
+            <p class="section__lead">埼玉と東京で2店舗を運営し、日常に寄り添う食の場を届けています。</p>
+        </div>
+
+        <div class="main-business">
+          <!-- 画像差し替え箇所：images/business/ に店舗写真を追加し次第、src を差し替えてください -->
+          <div class="main-business__visual">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="料理と会話を楽しむレストランの店内" loading="lazy">
+          </div>
+          <div class="main-business__body">
+            <p class="main-business__label">Main Business</p>
+            <h3 class="main-business__title">飲食店経営</h3>
+            <p class="main-business__desc">
+              合同会社AGGの中心事業は、ネパールの食文化にもつながる飲食店の経営です。
+              埼玉と東京の2店舗を通じて、地域の皆さまに料理と心地よい時間を提供しています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Event Highlight ============ -->
+    <section class="section" id="event-highlight">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Featured Business</p>
+          <h2 class="section__title">イベントマネジメント</h2>
+          <p class="section__lead">結婚式やパーティーから、ネパールの伝統行事まで幅広く対応しています。</p>
+        </div>
+
+        <div class="main-business">
+          <div class="main-business__visual main-business__visual--contain">
+            <img src="images/event.png" alt="イベントの様子">
+            <!-- 画像差し替え箇所：実際のイベント写真が用意でき次第、src を差し替えてください -->
+          </div>
+          <div class="main-business__body">
+            <p class="main-business__label">Event Management</p>
+            <h3 class="main-business__title">結婚式からネパールの伝統行事まで</h3>
+            <p class="main-business__desc">
+              結婚式や誕生日会、ベビーシャワーのほか、ネパールの伝統行事「パスニ（生後6か月のお祝い）」など、
+              多文化に対応したイベントの企画・運営を行っています。
+            </p>
+            <ul class="sub-business-card__list">
+              <li>結婚式（ウェディング）</li>
+              <li>パスニ（生後6か月のお祝い）</li>
+              <li>誕生日会</li>
+              <li>ベビーシャワー</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Stores ============ -->
+    <section class="section" id="stores">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Our Stores</p>
+          <h2 class="section__title">運営店舗</h2>
+          <p class="section__lead">現在、埼玉と東京で2店舗を運営しています。店舗の詳しい情報は各ページをご覧ください。</p>
+        </div>
+
+        <div class="store-grid">
+          <article class="store-card">
+            <img src="images/saitama.jpg" alt="埼玉の店舗" class="store-card__image">
+            <div class="store-card__body">
+              <p class="store-card__area">SAITAMA</p>
+              <h3 class="store-card__title">埼玉の店舗</h3>
+              <p class="store-card__desc">地域に根ざした飲食店として、料理とサービスを提供しています。</p>
+              <a href="https://s.tabelog.com/saitama/A1102/A110202/11067185/" class="text-link" target="_blank" rel="noopener noreferrer">食べログで店舗を見る</a>
+            </div>
+          </article>
+          <article class="store-card">
+            <img src="images/tokyo.jpg" alt="東京の店舗" class="store-card__image">
+            <div class="store-card__body">
+              <p class="store-card__area">TOKYO</p>
+              <h3 class="store-card__title">東京の店舗</h3>
+              <p class="store-card__desc">人が集まり、食を通じて交流できる場を運営しています。</p>
+              <a href="https://s.tabelog.com/tokyo/A1312/A131203/13312089/" class="text-link" target="_blank" rel="noopener noreferrer">食べログで店舗を見る</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Other Businesses ============ -->
+    <section class="section" id="other-business">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Other Businesses</p>
+          <h2 class="section__title">その他の事業</h2>
+          <p class="section__lead">飲食店経営に加え、以下の事業も展開しています。</p>
+        </div>
+
+        <div class="sub-business-grid">
+          <article class="sub-business-card">
+            <h3 class="sub-business-card__title">営業コンサルティング</h3>
+            <p class="sub-business-card__desc">営業活動に関するコンサルティング事業。</p>
+          </article>
+          <article class="sub-business-card">
+            <h3 class="sub-business-card__title">労働者派遣業</h3>
+            <p class="sub-business-card__desc">労働者派遣に関する事業。</p>
+          </article>
+          <article class="sub-business-card">
+            <h3 class="sub-business-card__title">不動産販売</h3>
+            <p class="sub-business-card__desc">不動産販売に関する事業。</p>
+          </article>
+          <article class="sub-business-card">
+            <h3 class="sub-business-card__title">ハラールフード</h3>
+            <p class="sub-business-card__desc">ハラールフードの輸入・販売。</p>
+          </article>
+          <article class="sub-business-card">
+            <h3 class="sub-business-card__title">加盟店管理</h3>
+            <p class="sub-business-card__desc">加盟店管理・フランチャイズ関連事業。</p>
+          </article>
+        </div>
+
+        <p style="margin-top: var(--space-4);">
+          <a href="business.html" class="btn btn--outline">事業内容を詳しく見る</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ Company Information ============ -->
+    <section class="section section--alt" id="company">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Company Information</p>
+          <h2 class="section__title">会社情報</h2>
+        </div>
+
+        <div class="company-info">
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th scope="row">会社名</th>
+                <td>合同会社AGG</td>
+              </tr>
+              <tr>
+                <th scope="row">代表社員</th>
+                <td>カドカ・ナラヤン</td>
+              </tr>
+              <tr>
+                <th scope="row">所在地</th>
+                <td><span data-ja="東京都墨田区立花四丁目23-7" data-en="4-23-7 Tachibana, Sumida-ku, Tokyo">東京都墨田区立花四丁目23-7</span><br><span data-ja="椎業ビル1階101号室" data-en="Shiiba Building, 1F, Room 101, Japan">椎業ビル1階101号室</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            より詳しい会社概要は「会社概要」ページをご覧ください。
+          </p>
+        </div>
+
+        <p style="margin-top: var(--space-4);">
+          <a href="about.html" class="btn btn--outline">会社概要を見る</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ Contact誘導 ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-panel">
+          <h2 class="cta-panel__title">お問い合わせ</h2>
+          <p class="cta-panel__desc">事業に関するお問い合わせは、こちらのフォームよりご連絡ください。</p>
+          <a href="contact.html" class="btn btn--primary">お問い合わせフォームへ</a>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="logo">AGG</p>
+          <p class="site-footer__desc"><span data-ja="合同会社AGG" data-en="AGG LLC">合同会社AGG</span><br><span data-ja="飲食店経営を中心に、複数の事業を展開しています。" data-en="Building connections through food and hospitality.">飲食店経営を中心に、複数の事業を展開しています。</span></p>
+        </div>
+        <nav class="site-footer__nav" aria-label="フッターナビゲーション" data-ja-aria-label="フッターナビゲーション" data-en-aria-label="Footer navigation">
+          <div>
+            <p class="site-footer__nav-title">サイト内</p>
+            <ul class="site-footer__nav-list">
+              <li><a href="index.html">TOP</a></li>
+              <li><a href="about.html">会社概要</a></li>
+              <li><a href="president.html">社長挨拶</a></li>
+              <li><a href="business.html">事業内容</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="site-footer__nav-title" data-ja="その他" data-en="Legal">その他</p>
+            <ul class="site-footer__nav-list">
+              <li><a href="privacy.html">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="site-footer__sns">
+          <p class="site-footer__sns-title">SNS</p>
+          <div class="site-footer__sns-list">
+            <a href="https://www.facebook.com/narayan.khadka.1441810" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15h-2.4v-3H10V9.5C10 7.29 11.79 6.5 13.44 6.5c.79 0 1.56.06 1.56.06V9h-1.14c-1.13 0-1.42.7-1.42 1.42V12h2.75l-.44 3H12.44v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/gunzee2049" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43-.26.66-.6 1.21-1.15 1.76-.55.55-1.1.9-1.76 1.15-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47-.66-.26-1.21-.6-1.76-1.15-.55-.55-.9-1.1-1.15-1.76-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76.55-.55 1.1-.9 1.76-1.15.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.4-8.4a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2025 合同会社AGG</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/819054232698" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsAppで問い合わせる" data-ja-aria-label="WhatsAppで問い合わせる" data-en-aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.68 1.44 5.28L2 22l4.94-1.55a9.9 9.9 0 004.98 1.33h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.06 3.03 14.6 2 12.04 2zm5.78 14.17c-.24.68-1.4 1.3-1.93 1.36-.5.06-.98.26-3.3-.69-2.79-1.15-4.6-3.96-4.75-4.14-.14-.19-1.14-1.51-1.14-2.88 0-1.37.72-2.04.97-2.32.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.58.8 2 .87 2.14.07.15.11.32.02.51-.09.19-.14.31-.27.48-.14.17-.29.37-.41.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.37-.24.63-.14.26.1 1.64.78 1.92.92.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
 </body>
 </html>
