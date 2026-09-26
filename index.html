@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f4">
+  <meta name="description" content="合同会社AGGのウェブサイト。言語を選択してください。">
+  <title>AGG | Language Selection</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      color: #2b2825;
+      background: #faf8f4;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 280px;
+      min-height: 100vh;
+      margin: 0;
+      background:
+        linear-gradient(135deg, transparent 0 72%, rgba(217, 149, 50, 0.08) 72% 72.2%, transparent 72.2%),
+        linear-gradient(315deg, transparent 0 84%, rgba(180, 85, 47, 0.07) 84% 84.2%, transparent 84.2%),
+        #faf8f4;
+    }
+
+    main {
+      display: grid;
+      min-height: 100vh;
+      grid-template-rows: auto 1fr auto;
+      padding: 32px clamp(20px, 6vw, 88px) 24px;
+    }
+
+    .wordmark {
+      width: fit-content;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .selector {
+      width: min(100%, 520px);
+      align-self: center;
+      justify-self: center;
+      padding: 60px 0 72px;
+      animation: arrive 600ms ease-out both;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: #8f4325;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: clamp(2.25rem, 8vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .intro {
+      margin: 16px 0 38px;
+      color: #6b6259;
+      font-size: 1rem;
+    }
+
+    .language-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .language-link {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      border: 1px solid rgba(43, 40, 37, 0.18);
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.76);
+      color: #2b2825;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .language-link span:last-child {
+      color: #8f4325;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .language-link:hover {
+      transform: translateY(-2px);
+      border-color: #b4552f;
+      background: #fff;
+    }
+
+    .language-link:focus-visible {
+      outline: 3px solid #d99532;
+      outline-offset: 3px;
+    }
+
+    footer {
+      color: #6b6259;
+      font-size: 0.8125rem;
+    }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      main {
+        padding-top: 26px;
+        padding-bottom: 20px;
+      }
+
+      .selector {
+        padding: 48px 0 56px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="wordmark" aria-label="AGG">AGG</div>
+
+    <section class="selector" aria-labelledby="page-title">
+      <p class="eyebrow">合同会社AGG</p>
+      <h1 id="page-title">言語を選択</h1>
+      <p class="intro">Select your language</p>
+      <nav class="language-list" aria-label="Language selection">
+        <a class="language-link" href="/AGG_JP/" lang="ja">
+          <span>日本語 / Japanese</span>
+          <span aria-hidden="true">&#8594;</span>
+        </a>
+        <a class="language-link" href="/AGG_EN/" lang="en">
+          <span>English</span>
+          <span aria-hidden="true">&#8594;</span>
+        </a>
+      </nav>
+    </section>
+
+    <footer>&copy; AGG LLC</footer>
+  </main>
+</body>
+</html>
