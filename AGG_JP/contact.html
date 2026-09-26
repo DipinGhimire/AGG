@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー｜合同会社AGG</title>
-  <meta name="description" content="合同会社AGGのプライバシーポリシーページです。">
+  <title>お問い合わせ｜合同会社AGG</title>
+  <meta name="description" content="合同会社AGGへのお問い合わせページです。">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="プライバシーポリシー｜合同会社AGG">
-  <meta property="og:description" content="合同会社AGGのプライバシーポリシーページです。">
+  <meta property="og:title" content="お問い合わせ｜合同会社AGG">
+  <meta property="og:description" content="合同会社AGGへのお問い合わせページです。">
   <meta property="og:site_name" content="合同会社AGG">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-  <header class="site-header">
+ <header class="site-header">
     <div class="site-header__inner">
-      <a href="index.html" class="logo">AGG<small>合同会社AGG</small></a>
-
+      <a href="index.html" class="logo">
+        <img src="../images/logo.png" alt="合同会社AGG" class="logo__image">
+      </a>
       <nav class="nav" id="site-nav" aria-label="グローバルナビゲーション">
         <ul class="nav__list">
           <li><a class="nav__link" href="index.html">TOP</a></li>
@@ -41,41 +42,79 @@
 
   <main>
     <div class="container">
-      <p class="breadcrumb"><a href="index.html">TOP</a> ／ プライバシーポリシー</p>
+      <p class="breadcrumb"><a href="index.html">TOP</a> ／ お問い合わせ</p>
     </div>
 
     <div class="page-header">
       <div class="container">
-        <p class="page-header__eyebrow">Privacy Policy</p>
-        <h1 class="page-header__title">プライバシーポリシー</h1>
+        <p class="page-header__eyebrow">Contact</p>
+        <h1 class="page-header__title">お問い合わせ</h1>
+        <p class="page-header__desc">
+          事業に関するご質問・ご相談は、以下のフォームよりお送りください。
+        </p>
       </div>
     </div>
 
     <section class="section">
       <div class="container">
-        <div class="policy-content">
-          <p>合同会社AGG（以下「当社」といいます）は、お問い合わせフォームを通じて取得する個人情報を、以下のとおり適切に取り扱います。</p>
 
-          <h2>1. 取得する情報</h2>
-          <p>お問い合わせの際に、お名前、会社名、メールアドレス、お問い合わせ内容などをご提供いただく場合があります。</p>
-
-          <h2>2. 利用目的</h2>
-          <p>取得した情報は、お問い合わせへの回答、必要な連絡、当社のサービス改善のために利用します。ご本人の同意なく、利用目的を超えて利用することはありません。</p>
-
-          <h2>3. 第三者提供</h2>
-          <p>当社は、法令に基づく場合を除き、ご本人の同意なく個人情報を第三者へ提供しません。</p>
-
-          <h2>4. 安全管理</h2>
-          <p>当社は、個人情報の漏えい、滅失、毀損などを防止するため、適切な安全管理に努めます。</p>
-
-          <h2>5. 開示・訂正・削除</h2>
-          <p>ご本人から個人情報の開示、訂正、削除などのご相談を受けた場合は、本人確認のうえ、法令に従って対応します。</p>
-
-          <h2>6. お問い合わせ窓口</h2>
-          <p>個人情報の取扱いに関するお問い合わせは、当社のお問い合わせフォームよりご連絡ください。</p>
-
-          <p class="policy-content__date">制定日：2026年9月6日</p>
+        <!--
+          注意：このフォームは現時点でバックエンド（送信処理）が未実装です。
+          入力チェック（バリデーション）はJavaScriptで行っていますが、
+          実際にメールを送信するには、サーバーサイドの処理
+          （PHP / フォーム送信サービス / API連携など）を別途実装する必要があります。
+        -->
+        <div class="form-success" id="form-success" role="status">
+          入力内容を確認しました。現在は送信先設定前のプレビューです。
         </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="category">お問い合わせ種別<span class="required">必須</span></label>
+            <select id="category" name="category" data-required>
+              <option value="">選択してください</option>
+              <option value="店舗について">店舗について</option>
+              <option value="事業について">事業について</option>
+              <option value="その他">その他</option>
+            </select>
+            <p class="form-error">お問い合わせ種別を選択してください。</p>
+          </div>
+
+          <div class="form-row">
+            <label for="name">お名前<span class="required">必須</span></label>
+            <input type="text" id="name" name="name" data-required autocomplete="name">
+            <p class="form-error">お名前を入力してください。</p>
+          </div>
+
+          <div class="form-row">
+            <label for="company">会社名</label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+
+          <div class="form-row">
+            <label for="email">メールアドレス<span class="required">必須</span></label>
+            <input type="email" id="email" name="email" data-required autocomplete="email">
+            <p class="form-error">正しいメールアドレスを入力してください。</p>
+          </div>
+
+          <div class="form-row">
+            <label for="message">お問い合わせ内容<span class="required">必須</span></label>
+            <textarea id="message" name="message" data-required></textarea>
+            <p class="form-error">お問い合わせ内容を入力してください。</p>
+          </div>
+
+          <div class="form-consent">
+            <label>
+              <input type="checkbox" id="consent" name="consent" data-required>
+              <span><a href="privacy.html">プライバシーポリシー</a>に同意する<span class="required">必須</span></span>
+            </label>
+            <p class="form-error">プライバシーポリシーへの同意が必要です。</p>
+          </div>
+          <button type="submit" class="btn btn--primary">送信する</button>
+          <p class="form-note">
+            現在はフォームの入力確認まで対応しています。送信先設定後に実送信へ切り替えます。
+          </p>
+        </form>
       </div>
     </section>
   </main>
@@ -127,6 +166,6 @@
     <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.68 1.44 5.28L2 22l4.94-1.55a9.9 9.9 0 004.98 1.33h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.06 3.03 14.6 2 12.04 2zm5.78 14.17c-.24.68-1.4 1.3-1.93 1.36-.5.06-.98.26-3.3-.69-2.79-1.15-4.6-3.96-4.75-4.14-.14-.19-1.14-1.51-1.14-2.88 0-1.37.72-2.04.97-2.32.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.58.8 2 .87 2.14.07.15.11.32.02.51-.09.19-.14.31-.27.48-.14.17-.29.37-.41.5-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.37-.24.63-.14.26.1 1.64.78 1.92.92.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
   </a>
 
-  <script src="main.js"></script>
+  <script src="../main.js"></script>
 </body>
 </html>
