@@ -237,6 +237,31 @@ textarea:focus-visible {
   border-color: var(--color-accent);
 }
 
+.language-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+}
+
+.language-toggle button {
+  min-width: 34px;
+  min-height: 30px;
+  padding: 0 0.4rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-subtext);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+}
+
+.language-toggle button.is-active {
+  background: var(--color-text);
+  color: #fff;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
