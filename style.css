@@ -1215,11 +1215,11 @@ textarea:focus-visible {
 
 /* ---------- 20. フッター：統一リデザイン ---------- */
 :root {
-  --color-footer-bg: #292724;
-  --color-footer-surface: #373430;
-  --color-footer-text: #f7f4ee;
-  --color-footer-muted: #c2bcb3;
-  --color-footer-border: rgba(247, 244, 238, 0.14);
+  --color-footer-bg: var(--color-bg);
+  --color-footer-surface: var(--color-bg-alt);
+  --color-footer-text: var(--color-text);
+  --color-footer-muted: var(--color-subtext);
+  --color-footer-border: rgba(43, 40, 37, 0.14);
   --color-footer-social: #287451;
   --color-footer-social-hover: #216341;
   --space-footer-section: 2.5rem;
@@ -1257,8 +1257,8 @@ textarea:focus-visible {
   max-height: 110px;
   margin-inline: auto;
   object-fit: contain;
-  filter: grayscale(1) contrast(2.5) invert(1) brightness(1.4);
-  mix-blend-mode: screen;
+  filter: brightness(1.03);
+  mix-blend-mode: darken;
 }
 
 .site-footer__desc {
@@ -1300,7 +1300,7 @@ textarea:focus-visible {
 }
 
 .site-footer__whatsapp {
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  border: 1px solid var(--color-footer-border);
   background-color: var(--color-footer-social);
 }
 
